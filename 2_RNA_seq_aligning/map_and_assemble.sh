@@ -20,3 +20,5 @@ cat assembling_transcripts.sh | sed -e "s/tissue/$name/g"  -e "s/threads/$thread
 
 sbatch --wait -p $partition mapping.submit.sh
 sbatch --wait -p $partition assembling_transcripts.submit.sh
+
+echo "Hey,come back! All jobs are completed! "
