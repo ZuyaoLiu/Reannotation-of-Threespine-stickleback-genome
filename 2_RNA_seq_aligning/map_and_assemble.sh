@@ -19,6 +19,7 @@ cat mapping.sh |sed -e "s!index!$index!g" -e "s!tissue!$name!g" -e "s!read_file_
 cat assembling_transcripts.sh | sed -e "s/tissue/$name/g"  -e "s/threads/$threads/g" > assembling_transcripts.submit.sh
 
 sbatch --wait -p $partition mapping.submit.sh
+rm input.list
 sbatch --wait -p $partition assembling_transcripts.submit.sh
 
 echo "Hey,come back! All jobs are completed! "
