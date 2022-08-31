@@ -24,4 +24,4 @@ if [ "$lib" == "PE" ];then
 elif [ "$lib" == "SE" ];then
 	hisat2 -p threads --dta --very-sensitive -x index -U $read1|samtools sort -@ threads - -o $out_bam
 fi
-rm input.list
+
